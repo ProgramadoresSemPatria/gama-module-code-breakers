@@ -29,6 +29,10 @@ export function Flow() {
     setSelectedNode(null);
   };
 
+  const nodeData = selectedNode && typeof selectedNode.data.label === 'string'
+    ? { id: selectedNode.id, label: selectedNode.data.label }
+    : null;
+
 
   return (
     <div className='h-full w-full relative p-4'>
@@ -46,11 +50,7 @@ export function Flow() {
       <Modal
         isOpen={isModalOpen}
         onClose={closeModal}
-        nodeData={
-          selectedNode && typeof selectedNode.data.label === 'string'
-            ? { id: selectedNode.id, label: selectedNode.data.label }
-            : null
-        }
+        nodeData={nodeData}
       />
     </div>
   );
