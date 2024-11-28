@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 
+type ActiveTabs = 'algorithms' | 'courses';
+
 export function Sidebar() {
-  const [activeTab, setActiveTab] = useState("algoritmos");
+  const [activeTab, setActiveTab] = useState<ActiveTabs>("algorithms");
   const progress = 0; 
   const total = 150; 
 
@@ -13,22 +15,22 @@ export function Sidebar() {
       <div className="flex justify-center items-center space-x-6 mt-4">
         <div
           className={`cursor-pointer px-4 py-2 rounded-3xl font-bold text-md ${
-            activeTab === "algoritmos" ? "bg-[#4814b0] text-white" : ""
+            activeTab === "algorithms" ? "bg-[#4814b0] text-white" : ""
           }`}
-          onClick={() => setActiveTab("algoritmos")}
+          onClick={() => setActiveTab("algorithms")}
         >
-          Algoritmos
+          algorithms
         </div>
         <div
           className={`cursor-pointer px-4 py-2 rounded-3xl font-bold text-md ${
-            activeTab === "cursos" ? "bg-[#4814b0] text-white" : ""
+            activeTab === "courses" ? "bg-[#4814b0] text-white" : ""
           }`}
-          onClick={() => setActiveTab("cursos")}
+          onClick={() => setActiveTab("courses")}
         >
-          Cursos
+          courses
         </div>
       </div>
-      {activeTab === "algoritmos" && (
+      {activeTab === "algorithms" && (
         <div className="mt-8 px-4">
           <p className="text-sm mt-2 font-bold ">
             ({progress} / {total})
