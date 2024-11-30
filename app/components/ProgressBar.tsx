@@ -8,7 +8,7 @@ type ProgressBarProps = {
     const percentage = (progress / total) * 100;
   
     return (
-      <div className={`px-4 ${className}`}>
+      <div className={`flex flex-col items-center justify-centerpx-4 ${className} w-64`}>
         <p className="text-sm font-bold">
           ({progress} / {total})
         </p>
