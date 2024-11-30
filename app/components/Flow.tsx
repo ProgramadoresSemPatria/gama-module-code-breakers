@@ -1,6 +1,6 @@
 'use client';
 
-import { Controls, ReactFlow, ReactFlowProvider, useNodesState, Node } from '@xyflow/react';
+import { Controls, ReactFlow, ReactFlowProvider, useNodesState, Node, MarkerType, Background } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import { useState } from 'react';
 import { Modal } from './Modal';
@@ -11,7 +11,18 @@ const initialNodes: Node[] = [
 ];
 
 const initialEdges = [
-  { id: 'e1-2', source: '1', target: '2' },
+  { id: 'e1-2', source: '1', target: '2', 
+    markerEnd: {
+      type: MarkerType.ArrowClosed,
+      width: 20,
+      height: 20,
+      color: '#FFFFFF',
+  },
+    style: {
+      strokeWidth: 2,
+      stroke: '#FFFFFF',
+  },
+  },
 ];
 
 export function Flow() {
@@ -37,7 +48,9 @@ export function Flow() {
   return (
     <div className='h-full w-full relative p-4'>
       <ReactFlowProvider>
-        <ReactFlow edges={initialEdges} nodes={nodes} onNodesChange={onNodesChange}  onNodeClick={handleNodeClick}/>
+        
+        <ReactFlow edges={initialEdges} nodes={nodes} onNodesChange={onNodesChange} style={{ backgroundColor: '#13181c' }}  onNodeClick={handleNodeClick} />
+
 
         <Controls
           position='bottom-right'

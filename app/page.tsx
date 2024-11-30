@@ -7,7 +7,7 @@ export default function Home() {
     <div className='h-full w-full'>
       <Header />
 
-      <div className="h-[calc(100vh-48px)] w-full flex">
+      <div className="h-[calc(100vh-48px)] w-full flex bg-[#13181c]">
         <Flow />
         <Sidebar />
       </div>
