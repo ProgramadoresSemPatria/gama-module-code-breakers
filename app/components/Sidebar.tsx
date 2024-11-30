@@ -31,7 +31,7 @@ export function Sidebar() {
           courses
         </div>
       </div>
-      {activeTab === "algorithms" && <ProgressBar progress={progress} total={total} />}
+      {activeTab === "algorithms" && <ProgressBar progress={progress} total={total} className="mt-8"/>}
     </aside>
   );
 }

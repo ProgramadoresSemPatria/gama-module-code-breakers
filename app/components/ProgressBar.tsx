@@ -1,14 +1,15 @@
 type ProgressBarProps = {
     progress: number; 
-    total: number;    
+    total: number;  
+    className?: string;  
   };
   
-  export function ProgressBar({ progress, total }: ProgressBarProps) {
+  export function ProgressBar({ progress, total, className = "" }: ProgressBarProps) {
     const percentage = (progress / total) * 100;
   
     return (
-      <div className="mt-8 px-4">
-        <p className="text-sm mt-2 font-bold">
+      <div className={`px-4 ${className}`}>
+        <p className="text-sm font-bold">
           ({progress} / {total})
         </p>
         <div className="w-full bg-white rounded-full h-4 mt-2">
