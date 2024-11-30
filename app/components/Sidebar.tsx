@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ProgressBar } from "./ProgressBar";
 
+
 type ActiveTabs = 'algorithms' | 'courses';
 
 export function Sidebar() {
@@ -31,7 +32,12 @@ export function Sidebar() {
           courses
         </div>
       </div>
-      {activeTab === "algorithms" && <ProgressBar progress={progress} total={total} className="mt-8"/>}
+      {activeTab === "algorithms" && (
+        <div className="flex items-center justify-center">
+          <ProgressBar progress={progress} total={total} className="mt-8"/>
+        </div>
+        
+      )}
     </aside>
   );
 }
