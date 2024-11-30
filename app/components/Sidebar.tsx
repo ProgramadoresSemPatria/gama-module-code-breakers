@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from "react";
+import { ProgressBar } from "./ProgressBar";
+
 
 type ActiveTabs = 'algorithms' | 'courses';
 
@@ -31,19 +33,10 @@ export function Sidebar() {
         </div>
       </div>
       {activeTab === "algorithms" && (
-        <div className="mt-8 px-4">
-          <p className="text-sm mt-2 font-bold ">
-            ({progress} / {total})
-          </p>
-          <div className="w-full bg-white rounded-full h-4 mt-2">
-            <div
-              className="bg-blue-500 h-4 rounded-full"
-              style={{ width: `${(progress / total) * 100}%` }} 
-            ></div>
-          </div>
-          
-          
+        <div className="flex items-center justify-center">
+          <ProgressBar progress={progress} total={total} className="mt-8"/>
         </div>
+        
       )}
     </aside>
   );
