@@ -1,6 +1,8 @@
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
+import { ProgressBar } from './ProgressBar';
 
 interface ModalProps {
   isOpen: boolean;
@@ -9,6 +11,10 @@ interface ModalProps {
 }
 
 export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, nodeData }) => {
+
+  const [progress, useProgress] = useState(0); 
+  const total = 7; 
+
   return (
     <AnimatePresence>
       {isOpen && nodeData && (
@@ -28,7 +34,8 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, nodeData }) => {
             </button>
 
             <div className="text-white flex flex-col items-center">
-              <h2 className="text-xl font-bold mb-4">{nodeData.label}</h2>
+              <h2 className="text-xl font-bold ">{nodeData.label}</h2>
+              <ProgressBar progress={progress} total={total} className='mt-2'/>
             </div>
           </motion.div>
         </div>
