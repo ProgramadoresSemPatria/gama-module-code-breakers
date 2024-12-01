@@ -5,14 +5,23 @@ import { useState } from 'react';
 
 import ModalCard from './ModalCard';
 import { ProgressBar } from './ProgressBar';
+import TopicsTable from './TopicsTable';
 
-interface CourseTopic {
+interface CourseTopicCard {
   id: string;
   title: string;
   description: string;
 }
 
-const courseTopics: CourseTopic[] = [
+interface TableData {
+  id: string;
+  title: string;
+  difficulty: string;
+  problemLink: string;
+  solutionLink: string;
+}
+
+const courseTopicsForCards: CourseTopicCard[] = [
   {
     id: '1',
     title: 'Dynamic Arrays',
@@ -32,6 +41,37 @@ const courseTopics: CourseTopic[] = [
     id: '4',
     title: 'Prefix Sums',
     description: 'Advanced Algorithms',
+  },
+];
+
+const courseTopicsForTable: TableData[] = [
+  {
+    id: '1',
+    title: 'Binary Trees',
+    difficulty: 'Easy',
+    problemLink: '#',
+    solutionLink: '#',
+  },
+  {
+    id: '2',
+    title: 'Graph Traversal',
+    difficulty: 'Medium',
+    problemLink: '#',
+    solutionLink: '#',
+  },
+  {
+    id: '3',
+    title: 'Dynamic Programming',
+    difficulty: 'Hard',
+    problemLink: '#',
+    solutionLink: '#',
+  },
+  {
+    id: '4',
+    title: 'Sorting Algorithms',
+    difficulty: 'Medium',
+    problemLink: '#',
+    solutionLink: '#',
   },
 ];
 
@@ -80,8 +120,9 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, nodeData }) => {
 
           <h3 className="mt-8 text-center font-semibold text-white">Topics</h3>
 
+          
           <div className="flex flex-wrap items-center justify-center gap-4 p-4">
-            {courseTopics.map((topic) => (
+            {courseTopicsForCards.map((topic) => (
               <ModalCard
                 key={topic.id}
                 id={topic.id}
@@ -91,6 +132,12 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, nodeData }) => {
                 onCheckChange={() => handleCheckChange(topic.id)}
               />
             ))}
+          </div>
+
+    
+          
+          <div className="mt-8 overflow-x-auto">
+            <TopicsTable data={courseTopicsForTable} />
           </div>
         </motion.div>
       </div>
