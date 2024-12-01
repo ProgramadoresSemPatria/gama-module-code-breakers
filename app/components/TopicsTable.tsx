@@ -1,4 +1,4 @@
-import { Video, Star } from 'lucide-react';
+import { Star, Video } from 'lucide-react';
 
 interface TableData {
   id: string;
@@ -32,16 +32,21 @@ const TopicsTable: React.FC<TopicsTableProps> = ({ data }) => {
               className="border-t-2 border-gray-700 hover:bg-gray-800"
             >
               <td className="p-2 pl-4 pr-4 text-center">
-                <input type="checkbox" className='className="absolute right-4 top-4 h-4 w-4 appearance-none rounded border-2 border-gray-600 bg-gray-800 checked:border-[#1d9772] checked:bg-[#1d9772] hover:border-[#1d9772'/>
+                <input
+                  type="checkbox"
+                  className='className="absolute hover:border-[#1d9772 right-4 top-4 h-4 w-4 appearance-none rounded border-2 border-gray-600 bg-gray-800 checked:border-[#1d9772] checked:bg-[#1d9772]'
+                />
               </td>
-              <td className="p-2"><Star color='gold'/></td>
+              <td className="p-2">
+                <Star color="gold" />
+              </td>
               <td className="p-2">
                 <a href={topic.problemLink} className="hover:underline">
                   {topic.title}
                 </a>
               </td>
               <td className="p-2">{topic.difficulty}</td>
-              <td className="p-2 pr-4 pl-4 text-right">
+              <td className="p-2 pl-4 pr-4 text-right">
                 <a href={topic.solutionLink} className="hover:underline">
                   <Video />
                 </a>
@@ -55,4 +60,3 @@ const TopicsTable: React.FC<TopicsTableProps> = ({ data }) => {
 };
 
 export default TopicsTable;
-

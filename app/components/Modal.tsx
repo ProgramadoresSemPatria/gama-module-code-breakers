@@ -120,7 +120,6 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, nodeData }) => {
 
           <h3 className="mt-8 text-center font-semibold text-white">Topics</h3>
 
-          
           <div className="flex flex-wrap items-center justify-center gap-4 p-4">
             {courseTopicsForCards.map((topic) => (
               <ModalCard
@@ -134,8 +133,6 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, nodeData }) => {
             ))}
           </div>
 
-    
-          
           <div className="mt-8 overflow-x-auto">
             <TopicsTable data={courseTopicsForTable} />
           </div>
