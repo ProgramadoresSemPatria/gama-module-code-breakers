@@ -1,42 +1,41 @@
 'use client';
 
-import { useState } from "react";
-import { ProgressBar } from "./ProgressBar";
+import { useState } from 'react';
 
+import { ProgressBar } from './ProgressBar';
 
 type ActiveTabs = 'algorithms' | 'courses';
 
 export function Sidebar() {
-  const [activeTab, setActiveTab] = useState<ActiveTabs>("algorithms");
-  const progress = 0; 
-  const total = 150; 
+  const [activeTab, setActiveTab] = useState<ActiveTabs>('algorithms');
+  const progress = 0;
+  const total = 150;
 
   return (
-    <aside className="w-1/5 bg-gray-800/95 rounded mt-1 text-white text-center py-2">
+    <aside className="mt-1 w-1/5 rounded bg-gray-800/95 py-2 text-center text-white">
       <h2 className="mt-2 font-bold">Select Roadmap</h2>
-      <div className="flex justify-center items-center space-x-6 mt-4">
+      <div className="mt-4 flex items-center justify-center space-x-6">
         <div
-          className={`cursor-pointer px-4 py-2 rounded-3xl font-bold text-md ${
-            activeTab === "algorithms" ? "bg-[#4814b0] text-white" : ""
+          className={`text-md cursor-pointer rounded-3xl px-4 py-2 font-bold ${
+            activeTab === 'algorithms' ? 'bg-[#4814b0] text-white' : ''
           }`}
-          onClick={() => setActiveTab("algorithms")}
+          onClick={() => setActiveTab('algorithms')}
         >
           algorithms
         </div>
         <div
-          className={`cursor-pointer px-4 py-2 rounded-3xl font-bold text-md ${
-            activeTab === "courses" ? "bg-[#4814b0] text-white" : ""
+          className={`text-md cursor-pointer rounded-3xl px-4 py-2 font-bold ${
+            activeTab === 'courses' ? 'bg-[#4814b0] text-white' : ''
           }`}
-          onClick={() => setActiveTab("courses")}
+          onClick={() => setActiveTab('courses')}
         >
           courses
         </div>
       </div>
-      {activeTab === "algorithms" && (
+      {activeTab === 'algorithms' && (
         <div className="flex items-center justify-center">
-          <ProgressBar progress={progress} total={total} className="mt-8"/>
+          <ProgressBar progress={progress} total={total} className="mt-8" />
         </div>
-        
       )}
     </aside>
   );
