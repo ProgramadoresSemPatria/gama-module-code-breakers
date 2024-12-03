@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import React, { useState } from 'react';
+import YouTube from 'react-youtube';
 
 import { Header } from '@/app/components/Header';
 import Hint from '@/app/components/Hint';
@@ -11,6 +12,14 @@ const ValidParenthesesProblem = () => {
 
   const toggleHint = (index: number) => {
     setHints((prev) => prev.map((hint, idx) => (idx === index ? !hint : hint)));
+  };
+
+  const videoOpts = {
+    height: '450',
+    width: '840',
+    playerVars: {
+      autoplay: 0,
+    },
   };
 
   return (
@@ -110,6 +119,17 @@ const ValidParenthesesProblem = () => {
                 toggleHint={toggleHint}
               />
             ))}
+          </section>
+
+          <section className="space-y-4">
+            <h2 className="text-2xl font-bold">Video Explanation</h2>
+            <div className="flex justify-center">
+              <YouTube 
+                videoId="WTzjTskDFMg" 
+                opts={videoOpts}
+                className="mx-auto"
+              />
+            </div>
           </section>
         </div>
       </main>
