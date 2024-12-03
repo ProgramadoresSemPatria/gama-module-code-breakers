@@ -1,4 +1,5 @@
 import { Star, Video } from 'lucide-react';
+import Link from 'next/link';
 
 interface TableData {
   id: string;
@@ -47,9 +48,12 @@ const TopicsTable: React.FC<TopicsTableProps> = ({ data }) => {
               </td>
               <td className="p-2">{topic.difficulty}</td>
               <td className="p-2 pl-4 pr-4 text-right">
-                <a href={topic.solutionLink} className="hover:underline">
+                <Link
+                  href={`/solution/${topic.id}`}
+                  className="hover:underline"
+                >
                   <Video />
-                </a>
+                </Link>
               </td>
             </tr>
           ))}
