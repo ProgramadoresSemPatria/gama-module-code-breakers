@@ -30,17 +30,7 @@ const ValidParenthesesProblem = () => {
 
           <section className="space-y-4">
             <h2 className="text-2xl font-bold">Description</h2>
-            <p>
-              You are given a string{' '}
-              <code className="rounded bg-black px-1">s</code> consisting of the
-              characters:
-              <code className="rounded bg-black px-1">'('</code>,{' '}
-              <code className="rounded bg-black px-1">')'</code>,{' '}
-              <code className="rounded bg-black px-1">{'{'}</code>,{' '}
-              <code className="rounded bg-black px-1">{'}'}</code>,{' '}
-              <code className="rounded bg-black px-1">'['</code>, and{' '}
-              <code className="rounded bg-black px-1">']'</code>.
-            </p>
+
             <p>
               A string <code className="rounded bg-black px-1">s</code> is valid
               if:
