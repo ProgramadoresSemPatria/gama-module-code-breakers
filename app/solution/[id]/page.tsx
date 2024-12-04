@@ -124,8 +124,8 @@ const ValidParenthesesProblem = () => {
           <section className="space-y-4">
             <h2 className="text-2xl font-bold">Video Explanation</h2>
             <div className="flex justify-center">
-              <YouTube 
-                videoId="WTzjTskDFMg" 
+              <YouTube
+                videoId="WTzjTskDFMg"
                 opts={videoOpts}
                 className="mx-auto"
               />
