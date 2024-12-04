@@ -94,50 +94,52 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, nodeData }) => {
     );
   };
 
-  if (!isOpen || !nodeData) return null;
-
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex justify-end bg-black/50">
-        <motion.div
-          initial={{ x: '100%' }}
-          animate={{ x: 0 }}
-          exit={{ x: '100%' }}
-          transition={{ duration: 0.4, ease: 'easeInOut' }}
-          className="h-full w-4/5 bg-gray-800 p-4 shadow-lg"
-        >
-          <button
-            className="rounded bg-red-100 px-4 py-2 text-xs font-bold text-red-600 hover:bg-red-200"
-            onClick={onClose}
+      {nodeData && isOpen && (
+        <div className="fixed inset-0 z-50 flex justify-end bg-black/50">
+          <motion.div
+            initial={{ x: '100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '100%' }}
+            transition={{ duration: 0.2, ease: 'easeOut' }}
+            className="h-full w-4/5 bg-gray-800 p-4 shadow-lg"
           >
-            ESC
-          </button>
+            <button
+              className="rounded bg-red-100 px-4 py-2 text-xs font-bold text-red-600 hover:bg-red-200"
+              onClick={onClose}
+            >
+              ESC
+            </button>
 
-          <div className="flex flex-col items-center text-white">
-            <h2 className="text-xl font-bold">{nodeData.label}</h2>
-            <ProgressBar progress={progress} total={total} className="mt-2" />
-          </div>
+            <div className="flex flex-col items-center text-white">
+              <h2 className="text-xl font-bold">{nodeData.label}</h2>
+              <ProgressBar progress={progress} total={total} className="mt-2" />
+            </div>
 
-          <h3 className="mt-8 text-center font-semibold text-white">Topics</h3>
+            <h3 className="mt-8 text-center font-semibold text-white">
+              Topics
+            </h3>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 p-4">
-            {courseTopicsForCards.map((topic) => (
-              <ModalCard
-                key={topic.id}
-                id={topic.id}
-                title={topic.title}
-                description={topic.description}
-                checked={checkedItems.includes(topic.id)}
-                onCheckChange={() => handleCheckChange(topic.id)}
-              />
-            ))}
-          </div>
+            <div className="flex flex-wrap items-center justify-center gap-4 p-4">
+              {courseTopicsForCards.map((topic) => (
+                <ModalCard
+                  key={topic.id}
+                  id={topic.id}
+                  title={topic.title}
+                  description={topic.description}
+                  checked={checkedItems.includes(topic.id)}
+                  onCheckChange={() => handleCheckChange(topic.id)}
+                />
+              ))}
+            </div>
 
-          <div className="mt-8 overflow-x-auto">
-            <TopicsTable data={courseTopicsForTable} />
-          </div>
-        </motion.div>
-      </div>
+            <div className="mt-8 overflow-x-auto">
+              <TopicsTable data={courseTopicsForTable} />
+            </div>
+          </motion.div>
+        </div>
+      )}
     </AnimatePresence>
   );
 };
