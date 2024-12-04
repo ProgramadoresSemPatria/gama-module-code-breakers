@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 
-import { ProgressBar } from './ProgressBar';
+import { ProgressBar } from '@/app/components/ProgressBar';
+import { cn } from '@/app/utils/cn';
 
 type ActiveTabs = 'algorithms' | 'courses';
 
@@ -16,20 +17,22 @@ export function Sidebar() {
       <h2 className="mt-2 font-bold">Select Roadmap</h2>
       <div className="mt-4 flex items-center justify-center space-x-6">
         <div
-          className={`text-md cursor-pointer rounded-3xl px-4 py-2 font-bold ${
-            activeTab === 'algorithms' ? 'bg-[#4814b0] text-white' : ''
-          }`}
+          className={cn(
+            'text-md cursor-pointer rounded-3xl px-4 py-2 font-bold',
+            activeTab === 'algorithms' && 'bg-[#4814b0] text-white',
+          )}
           onClick={() => setActiveTab('algorithms')}
         >
-          algorithms
+          Algorithms
         </div>
         <div
-          className={`text-md cursor-pointer rounded-3xl px-4 py-2 font-bold ${
-            activeTab === 'courses' ? 'bg-[#4814b0] text-white' : ''
-          }`}
+          className={cn(
+            'text-md cursor-pointer rounded-3xl px-4 py-2 font-bold',
+            activeTab === 'courses' && 'bg-[#4814b0] text-white',
+          )}
           onClick={() => setActiveTab('courses')}
         >
-          courses
+          Courses
         </div>
       </div>
       {activeTab === 'algorithms' && (
