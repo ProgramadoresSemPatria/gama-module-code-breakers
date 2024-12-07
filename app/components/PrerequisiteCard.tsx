@@ -1,22 +1,18 @@
-import React from 'react';
-
-type ModalCardProps = {
-  id: string;
+type PrerequisiteCardProps = {
   title: string;
   description: string;
   checked: boolean;
   onCheckChange: () => void;
 };
 
-const ModalCard: React.FC<ModalCardProps> = ({
-  id,
+export function PrerequisiteCard({
   title,
   description,
   checked,
   onCheckChange,
-}) => {
+}: PrerequisiteCardProps) {
   return (
-    <div className="relative h-[100px] w-[270px] rounded-md bg-gray-950 p-4">
+    <div className="relative h-[100px] w-[270px] cursor-pointer rounded-md bg-gray-950 p-4">
       <input
         type="checkbox"
         checked={checked}
@@ -30,6 +26,4 @@ const ModalCard: React.FC<ModalCardProps> = ({
       </div>
     </div>
   );
-};
-
-export default ModalCard;
+}

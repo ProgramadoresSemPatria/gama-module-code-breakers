@@ -1,19 +1,13 @@
 import { Star, Video } from 'lucide-react';
 import Link from 'next/link';
 
-interface TableData {
-  id: string;
-  title: string;
-  difficulty: string;
-  problemLink: string;
-  solutionLink: string;
-}
+import { Problem } from '../utils/topicsContent';
 
-interface TopicsTableProps {
-  data: TableData[];
-}
+type ProblemsTable = {
+  problems: Problem[];
+};
 
-const TopicsTable: React.FC<TopicsTableProps> = ({ data }) => {
+export function ProblemsTable({ problems }: ProblemsTable) {
   return (
     <div className="mt-8 overflow-x-auto text-white">
       <table className="w-full text-left">
@@ -27,9 +21,9 @@ const TopicsTable: React.FC<TopicsTableProps> = ({ data }) => {
           </tr>
         </thead>
         <tbody>
-          {data.map((topic) => (
+          {problems.map((problem) => (
             <tr
-              key={topic.id}
+              key={problem.id}
               className="border-t-2 border-gray-700 hover:bg-gray-800"
             >
               <td className="p-2 pl-4 pr-4 text-center">
@@ -42,14 +36,19 @@ const TopicsTable: React.FC<TopicsTableProps> = ({ data }) => {
                 <Star color="gold" />
               </td>
               <td className="p-2">
-                <a href={topic.problemLink} className="hover:underline">
-                  {topic.title}
-                </a>
+                <Link
+                  href={problem.problemLink}
+                  className="hover:underline"
+                  target="_blank"
+                >
+                  {problem.title}
+                </Link>
               </td>
-              <td className="p-2">{topic.difficulty}</td>
+              <td className="p-2">{problem.difficulty}</td>
               <td className="p-2 pl-4 pr-4 text-right">
                 <Link
-                  href={`/solution/${topic.id}`}
+                  href={problem.solutionLink}
+                  target="_blank"
                   className="hover:underline"
                 >
                   <Video />
@@ -61,6 +60,4 @@ const TopicsTable: React.FC<TopicsTableProps> = ({ data }) => {
       </table>
     </div>
   );
-};
-
-export default TopicsTable;
+}
