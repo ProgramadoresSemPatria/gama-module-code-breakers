@@ -11,6 +11,7 @@ import '@xyflow/react/dist/style.css';
 import { CSSProperties, useState } from 'react';
 
 import { initialEdges, initialNodes } from '@/app/utils/nodes';
+import { TopicContent, topicsContent } from '@/app/utils/topicsContent';
 
 import { Modal } from './Modal';
 
@@ -22,23 +23,32 @@ const styles: CSSProperties = {
 
 export function Flow() {
   const [nodes, _setNodes, onNodesChange] = useNodesState(initialNodes);
-  const [selectedNode, setSelectedNode] = useState<Node | null>(null);
+  const [selectedTopic, setSelectedTopic] = useState<TopicContent | null>(null);
+  const [selectedNodeLabel, setSelectedNodeLabel] = useState<string | null>(
+    null,
+  );
   const [isModalOpen, setModalOpen] = useState<boolean>(false);
 
-  const handleNodeClick = (_event: React.MouseEvent, node: Node) => {
-    setSelectedNode(node);
+  function handleNodeClick(_event: React.MouseEvent, node: Node) {
+    const topicContent = topicsContent[node.data.slug as string];
+
+    setSelectedTopic(topicContent);
+    setSelectedNodeLabel(node.data.label as string);
+
     setModalOpen(true);
-  };
+  }
 
-  const closeModal = () => {
+  function closeModal() {
     setModalOpen(false);
-    setSelectedNode(null);
-  };
+    setSelectedTopic(null);
+    setSelectedNodeLabel(null);
+  }
 
-  const nodeData =
-    selectedNode && typeof selectedNode.data.label === 'string'
-      ? { id: selectedNode.id, label: selectedNode.data.label }
-      : null;
+  window.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeModal();
+    }
+  });
 
   return (
     <div className="relative h-full w-full p-4">
@@ -60,7 +70,12 @@ export function Flow() {
         />
       </ReactFlowProvider>
 
-      <Modal isOpen={isModalOpen} onClose={closeModal} nodeData={nodeData} />
+      <Modal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        topicContent={selectedTopic}
+        nodeLabel={selectedNodeLabel}
+      />
     </div>
   );
 }
