@@ -119,7 +119,7 @@ export const topicsContent: Topics = {
         id: '1',
         title: 'Two Pointers',
         description: 'Advanced Algorithms',
-      }
+      },
     ],
     problems: [
       {
@@ -134,7 +134,8 @@ export const topicsContent: Topics = {
         title: 'Two Sum II Input Array Is Sorted ',
         difficulty: 'medium',
         problemLink: 'https://neetcode.io/problems/two-integer-sum-ii',
-        solutionLink: 'https://neetcode.io/solutions/two-sum-ii-input-array-is-sorted',
+        solutionLink:
+          'https://neetcode.io/solutions/two-sum-ii-input-array-is-sorted',
       },
       {
         id: 3,
@@ -163,16 +164,16 @@ export const topicsContent: Topics = {
         difficulty: 'hard',
         problemLink: 'https://neetcode.io/problems/trapping-rain-water',
         solutionLink: 'https://neetcode.io/solutions/trapping-rain-water',
-      }
+      },
     ],
   },
-  'stack': {
+  stack: {
     prerequisites: [
       {
         id: '1',
         title: 'Stacks',
         description: 'Data Structures & Algorithms for Beginners',
-      }
+      },
     ],
     problems: [
       {
@@ -193,8 +194,10 @@ export const topicsContent: Topics = {
         id: 3,
         title: 'Evaluate Reverse Polish Notation',
         difficulty: 'medium',
-        problemLink: 'https://leetcode.com/problems/evaluate-reverse-polish-notation/',
-        solutionLink: 'https://neetcode.io/solutions/evaluate-reverse-polish-notation',
+        problemLink:
+          'https://leetcode.com/problems/evaluate-reverse-polish-notation/',
+        solutionLink:
+          'https://neetcode.io/solutions/evaluate-reverse-polish-notation',
       },
       {
         id: 4,
@@ -221,9 +224,11 @@ export const topicsContent: Topics = {
         id: 7,
         title: 'Largest Rectangle In Histogram',
         difficulty: 'hard',
-        problemLink: 'https://leetcode.com/problems/largest-rectangle-in-histogram/',
-        solutionLink: 'https://neetcode.io/solutions/largest-rectangle-in-histogram',
-      }
+        problemLink:
+          'https://leetcode.com/problems/largest-rectangle-in-histogram/',
+        solutionLink:
+          'https://neetcode.io/solutions/largest-rectangle-in-histogram',
+      },
     ],
   },
   'binary-search': {
@@ -237,7 +242,7 @@ export const topicsContent: Topics = {
         id: '2',
         title: 'Search Range',
         description: 'Data Structures & Algorithms for Beginners',
-      }
+      },
     ],
     problems: [
       {
@@ -265,30 +270,38 @@ export const topicsContent: Topics = {
         id: 4,
         title: 'Find Minimum In Rotated Sorted Array',
         difficulty: 'medium',
-        problemLink: 'https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/',
-        solutionLink: 'https://neetcode.io/solutions/find-minimum-in-rotated-sorted-array',
+        problemLink:
+          'https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/',
+        solutionLink:
+          'https://neetcode.io/solutions/find-minimum-in-rotated-sorted-array',
       },
       {
         id: 5,
         title: 'Search In Rotated Sorted Array',
         difficulty: 'medium',
-        problemLink: 'https://leetcode.com/problems/search-in-rotated-sorted-array/',
-        solutionLink: 'https://neetcode.io/solutions/search-in-rotated-sorted-array',
+        problemLink:
+          'https://leetcode.com/problems/search-in-rotated-sorted-array/',
+        solutionLink:
+          'https://neetcode.io/solutions/search-in-rotated-sorted-array',
       },
       {
         id: 6,
         title: 'Time Based Key Value Store',
         difficulty: 'medium',
-        problemLink: 'https://leetcode.com/problems/time-based-key-value-store/',
-        solutionLink: 'https://neetcode.io/solutions/time-based-key-value-store',
+        problemLink:
+          'https://leetcode.com/problems/time-based-key-value-store/',
+        solutionLink:
+          'https://neetcode.io/solutions/time-based-key-value-store',
       },
       {
         id: 7,
         title: 'Median of Two Sorted Arrays ',
         difficulty: 'hard',
-        problemLink: 'https://leetcode.com/problems/median-of-two-sorted-arrays/',
-        solutionLink: 'https://neetcode.io/solutions/median-of-two-sorted-arrays',
-      }
+        problemLink:
+          'https://leetcode.com/problems/median-of-two-sorted-arrays/',
+        solutionLink:
+          'https://neetcode.io/solutions/median-of-two-sorted-arrays',
+      },
     ],
   },
   'sliding-window': {
@@ -302,29 +315,35 @@ export const topicsContent: Topics = {
         id: '2',
         title: 'Sliding Window Variable Size',
         description: 'Advanced Algorithms',
-      }
+      },
     ],
     problems: [
       {
         id: 1,
         title: 'Best Time to Buy And Sell Stock',
         difficulty: 'easy',
-        problemLink: 'https://leetcode.com/problems/best-time-to-buy-and-sell-stock/',
-        solutionLink: 'https://neetcode.io/solutions/best-time-to-buy-and-sell-stock',
+        problemLink:
+          'https://leetcode.com/problems/best-time-to-buy-and-sell-stock/',
+        solutionLink:
+          'https://neetcode.io/solutions/best-time-to-buy-and-sell-stock',
       },
       {
         id: 2,
         title: 'Longest Substring Without Repeating Characters ',
         difficulty: 'medium',
-        problemLink: 'https://leetcode.com/problems/longest-substring-without-repeating-characters/',
-        solutionLink: 'https://neetcode.io/solutions/longest-substring-without-repeating-characters',
+        problemLink:
+          'https://leetcode.com/problems/longest-substring-without-repeating-characters/',
+        solutionLink:
+          'https://neetcode.io/solutions/longest-substring-without-repeating-characters',
       },
       {
         id: 3,
         title: 'Longest Repeating Character Replacement',
         difficulty: 'medium',
-        problemLink: 'https://leetcode.com/problems/longest-repeating-character-replacement/',
-        solutionLink: 'https://neetcode.io/solutions/longest-repeating-character-replacement',
+        problemLink:
+          'https://leetcode.com/problems/longest-repeating-character-replacement/',
+        solutionLink:
+          'https://neetcode.io/solutions/longest-repeating-character-replacement',
       },
       {
         id: 4,
@@ -346,7 +365,7 @@ export const topicsContent: Topics = {
         difficulty: 'hard',
         problemLink: 'https://leetcode.com/problems/sliding-window-maximum/',
         solutionLink: 'https://neetcode.io/solutions/sliding-window-maximum',
-      }
+      },
     ],
   },
   'linked-list': {
@@ -365,7 +384,7 @@ export const topicsContent: Topics = {
         id: '3',
         title: 'Fast and Slow Poniters',
         description: 'Advanced Algorithms',
-      }
+      },
     ],
     problems: [
       {
@@ -393,15 +412,19 @@ export const topicsContent: Topics = {
         id: 4,
         title: 'Remove Nth Node From End of List',
         difficulty: 'medium',
-        problemLink: 'https://leetcode.com/problems/remove-nth-node-from-end-of-list/',
-        solutionLink: 'https://neetcode.io/solutions/remove-nth-node-from-end-of-list',
+        problemLink:
+          'https://leetcode.com/problems/remove-nth-node-from-end-of-list/',
+        solutionLink:
+          'https://neetcode.io/solutions/remove-nth-node-from-end-of-list',
       },
       {
         id: 5,
         title: 'Copy List With Random Pointer',
         difficulty: 'medium',
-        problemLink: 'https://leetcode.com/problems/copy-list-with-random-pointer/',
-        solutionLink: 'https://neetcode.io/solutions/copy-list-with-random-pointer',
+        problemLink:
+          'https://leetcode.com/problems/copy-list-with-random-pointer/',
+        solutionLink:
+          'https://neetcode.io/solutions/copy-list-with-random-pointer',
       },
       {
         id: 6,
@@ -444,10 +467,10 @@ export const topicsContent: Topics = {
         difficulty: 'hard',
         problemLink: 'https://leetcode.com/problems/reverse-nodes-in-k-group/',
         solutionLink: 'https://neetcode.io/solutions/reverse-nodes-in-k-group',
-      }
+      },
     ],
   },
-  'trees': {
+  trees: {
     prerequisites: [
       {
         id: '1',
@@ -473,7 +496,7 @@ export const topicsContent: Topics = {
         id: '5',
         title: 'Iterative DFS',
         description: 'Advanced Algorithms',
-      }
+      },
     ],
     problems: [
       {
@@ -487,8 +510,10 @@ export const topicsContent: Topics = {
         id: 2,
         title: 'Maximum Depth of Binary Tree',
         difficulty: 'easy',
-        problemLink: 'https://leetcode.com/problems/maximum-depth-of-binary-tree/',
-        solutionLink: 'https://neetcode.io/solutions/maximum-depth-of-binary-tree',
+        problemLink:
+          'https://leetcode.com/problems/maximum-depth-of-binary-tree/',
+        solutionLink:
+          'https://neetcode.io/solutions/maximum-depth-of-binary-tree',
       },
       {
         id: 3,
@@ -522,89 +547,111 @@ export const topicsContent: Topics = {
         id: 7,
         title: 'Lowest Common Ancestor of a Binary Search Tree',
         difficulty: 'medium',
-        problemLink: 'https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/',
-        solutionLink: 'https://neetcode.io/solutions/lowest-common-ancestor-of-a-binary-search-tree',
+        problemLink:
+          'https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/',
+        solutionLink:
+          'https://neetcode.io/solutions/lowest-common-ancestor-of-a-binary-search-tree',
       },
       {
         id: 8,
         title: 'Binary Tree Level Order Traversal ',
         difficulty: 'medium',
-        problemLink: 'https://leetcode.com/problems/binary-tree-level-order-traversal/',
-        solutionLink: 'https://neetcode.io/solutions/binary-tree-level-order-traversal',
+        problemLink:
+          'https://leetcode.com/problems/binary-tree-level-order-traversal/',
+        solutionLink:
+          'https://neetcode.io/solutions/binary-tree-level-order-traversal',
       },
       {
         id: 9,
         title: 'Binary Tree Right Side View',
         difficulty: 'medium',
-        problemLink: 'https://leetcode.com/problems/binary-tree-right-side-view/',
-        solutionLink: 'https://neetcode.io/solutions/binary-tree-right-side-view',
+        problemLink:
+          'https://leetcode.com/problems/binary-tree-right-side-view/',
+        solutionLink:
+          'https://neetcode.io/solutions/binary-tree-right-side-view',
       },
       {
         id: 10,
         title: 'Count Good Nodes In Binary Tree',
         difficulty: 'medium',
-        problemLink: 'https://leetcode.com/problems/count-good-nodes-in-binary-tree/',
-        solutionLink: 'https://neetcode.io/solutions/count-good-nodes-in-binary-tree',
+        problemLink:
+          'https://leetcode.com/problems/count-good-nodes-in-binary-tree/',
+        solutionLink:
+          'https://neetcode.io/solutions/count-good-nodes-in-binary-tree',
       },
       {
         id: 11,
         title: 'Validate Binary Search Tree',
         difficulty: 'medium',
-        problemLink: 'https://leetcode.com/problems/validate-binary-search-tree/',
-        solutionLink: 'https://neetcode.io/solutions/validate-binary-search-tree',
+        problemLink:
+          'https://leetcode.com/problems/validate-binary-search-tree/',
+        solutionLink:
+          'https://neetcode.io/solutions/validate-binary-search-tree',
       },
       {
         id: 12,
         title: 'Kth Smallest Element In a Bst',
         difficulty: 'medium',
-        problemLink: 'https://leetcode.com/problems/kth-smallest-element-in-a-bst/',
-        solutionLink: 'https://neetcode.io/solutions/kth-smallest-element-in-a-bst',
+        problemLink:
+          'https://leetcode.com/problems/kth-smallest-element-in-a-bst/',
+        solutionLink:
+          'https://neetcode.io/solutions/kth-smallest-element-in-a-bst',
       },
       {
         id: 13,
         title: 'Construct Binary Tree From Preorder And Inorder Traversal',
         difficulty: 'medium',
-        problemLink: 'https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/',
-        solutionLink: 'https://neetcode.io/solutions/construct-binary-tree-from-preorder-and-inorder-traversal',
+        problemLink:
+          'https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/',
+        solutionLink:
+          'https://neetcode.io/solutions/construct-binary-tree-from-preorder-and-inorder-traversal',
       },
       {
         id: 14,
         title: 'Binary Tree Maximum Path Sum',
         difficulty: 'hard',
-        problemLink: 'https://leetcode.com/problems/binary-tree-maximum-path-sum/',
-        solutionLink: 'https://neetcode.io/solutions/binary-tree-maximum-path-sum',
+        problemLink:
+          'https://leetcode.com/problems/binary-tree-maximum-path-sum/',
+        solutionLink:
+          'https://neetcode.io/solutions/binary-tree-maximum-path-sum',
       },
       {
         id: 15,
         title: 'Serialize And Deserialize Binary Tree',
         difficulty: 'hard',
-        problemLink: 'https://leetcode.com/problems/serialize-and-deserialize-binary-tree/',
-        solutionLink: 'https://neetcode.io/solutions/serialize-and-deserialize-binary-tree',
-      }
+        problemLink:
+          'https://leetcode.com/problems/serialize-and-deserialize-binary-tree/',
+        solutionLink:
+          'https://neetcode.io/solutions/serialize-and-deserialize-binary-tree',
+      },
     ],
   },
-  'tries': {
+  tries: {
     prerequisites: [
       {
         id: '1',
         title: 'Trie',
         description: 'Advanced Algorithms',
-      }
+      },
     ],
     problems: [
       {
         id: 1,
         title: 'Implement Trie Prefix Tree',
         difficulty: 'medium',
-        problemLink: 'https://leetcode.com/problems/implement-trie-prefix-tree/',
-        solutionLink: 'https://neetcode.io/solutions/implement-trie-prefix-tree',
+        problemLink:
+          'https://leetcode.com/problems/implement-trie-prefix-tree/',
+        solutionLink:
+          'https://neetcode.io/solutions/implement-trie-prefix-tree',
       },
       {
         id: 2,
         title: 'Design Add And Search Words Data Structure ',
         difficulty: 'medium',
-        problemLink: 'https://leetcode.com/problems/design-add-and-search-words-data-structure/',
-        solutionLink: 'https://neetcode.io/solutions/design-add-and-search-words-data-structure',
+        problemLink:
+          'https://leetcode.com/problems/design-add-and-search-words-data-structure/',
+        solutionLink:
+          'https://neetcode.io/solutions/design-add-and-search-words-data-structure',
       },
       {
         id: 3,
@@ -615,7 +662,7 @@ export const topicsContent: Topics = {
       },
     ],
   },
-  'backtracking': {
+  backtracking: {
     prerequisites: [
       {
         id: '1',
@@ -692,8 +739,10 @@ export const topicsContent: Topics = {
         id: 8,
         title: 'Letter Combinations of a Phone Number',
         difficulty: 'medium',
-        problemLink: 'https://leetcode.com/problems/letter-combinations-of-a-phone-number/',
-        solutionLink: 'https://neetcode.io/solutions/letter-combinations-of-a-phone-number',
+        problemLink:
+          'https://leetcode.com/problems/letter-combinations-of-a-phone-number/',
+        solutionLink:
+          'https://neetcode.io/solutions/letter-combinations-of-a-phone-number',
       },
       {
         id: 9,
@@ -732,8 +781,10 @@ export const topicsContent: Topics = {
         id: 1,
         title: 'Kth Largest Element In a Stream ',
         difficulty: 'easy',
-        problemLink: 'https://leetcode.com/problems/kth-largest-element-in-a-stream/',
-        solutionLink: 'https://neetcode.io/solutions/kth-largest-element-in-a-stream',
+        problemLink:
+          'https://leetcode.com/problems/kth-largest-element-in-a-stream/',
+        solutionLink:
+          'https://neetcode.io/solutions/kth-largest-element-in-a-stream',
       },
       {
         id: 2,
@@ -746,15 +797,19 @@ export const topicsContent: Topics = {
         id: 3,
         title: 'K Closest Points to Origin ',
         difficulty: 'medium',
-        problemLink: 'https://leetcode.com/problems/k-closest-points-to-origin/',
-        solutionLink: 'https://neetcode.io/solutions/k-closest-points-to-origin',
+        problemLink:
+          'https://leetcode.com/problems/k-closest-points-to-origin/',
+        solutionLink:
+          'https://neetcode.io/solutions/k-closest-points-to-origin',
       },
       {
         id: 4,
         title: 'Kth Largest Element In An Array',
         difficulty: 'medium',
-        problemLink: 'https://leetcode.com/problems/kth-largest-element-in-an-array/',
-        solutionLink: 'https://neetcode.io/solutions/kth-largest-element-in-an-array',
+        problemLink:
+          'https://leetcode.com/problems/kth-largest-element-in-an-array/',
+        solutionLink:
+          'https://neetcode.io/solutions/kth-largest-element-in-an-array',
       },
       {
         id: 5,
@@ -774,12 +829,14 @@ export const topicsContent: Topics = {
         id: 7,
         title: 'Find Median From Data Stream ',
         difficulty: 'hard',
-        problemLink: 'https://leetcode.com/problems/find-median-from-data-stream/',
-        solutionLink: 'https://neetcode.io/solutions/find-median-from-data-stream',
+        problemLink:
+          'https://leetcode.com/problems/find-median-from-data-stream/',
+        solutionLink:
+          'https://neetcode.io/solutions/find-median-from-data-stream',
       },
     ],
   },
-  'graphs': {
+  graphs: {
     prerequisites: [
       {
         id: '1',
@@ -842,8 +899,10 @@ export const topicsContent: Topics = {
         id: 6,
         title: 'Pacific Atlantic Water Flow',
         difficulty: 'medium',
-        problemLink: 'https://leetcode.com/problems/pacific-atlantic-water-flow/',
-        solutionLink: 'https://neetcode.io/solutions/pacific-atlantic-water-flow',
+        problemLink:
+          'https://leetcode.com/problems/pacific-atlantic-water-flow/',
+        solutionLink:
+          'https://neetcode.io/solutions/pacific-atlantic-water-flow',
       },
       {
         id: 7,
@@ -877,8 +936,10 @@ export const topicsContent: Topics = {
         id: 11,
         title: 'Number of Connected Components In An Undirected Graph',
         difficulty: 'medium',
-        problemLink: 'https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/',
-        solutionLink: 'https://neetcode.io/solutions/number-of-connected-components-in-an-undirected-graph',
+        problemLink:
+          'https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/',
+        solutionLink:
+          'https://neetcode.io/solutions/number-of-connected-components-in-an-undirected-graph',
       },
       {
         id: 12,
@@ -949,8 +1010,10 @@ export const topicsContent: Topics = {
         id: 6,
         title: 'Longest Palindromic Substring',
         difficulty: 'medium',
-        problemLink: 'https://leetcode.com/problems/longest-palindromic-substring/',
-        solutionLink: 'https://neetcode.io/solutions/longest-palindromic-substring',
+        problemLink:
+          'https://leetcode.com/problems/longest-palindromic-substring/',
+        solutionLink:
+          'https://neetcode.io/solutions/longest-palindromic-substring',
       },
       {
         id: 7,
@@ -991,22 +1054,24 @@ export const topicsContent: Topics = {
         id: 12,
         title: 'Longest Increasing Subsequence',
         difficulty: 'medium',
-        problemLink: 'https://leetcode.com/problems/longest-increasing-subsequence/',
-        solutionLink: 'https://neetcode.io/solutions/longest-increasing-subsequence',
+        problemLink:
+          'https://leetcode.com/problems/longest-increasing-subsequence/',
+        solutionLink:
+          'https://neetcode.io/solutions/longest-increasing-subsequence',
       },
       {
         id: 13,
         title: 'Partition Equal Subset Sum ',
         difficulty: 'medium',
-        problemLink: 'https://leetcode.com/problems/partition-equal-subset-sum/',
-        solutionLink: 'https://neetcode.io/solutions/partition-equal-subset-sum',
+        problemLink:
+          'https://leetcode.com/problems/partition-equal-subset-sum/',
+        solutionLink:
+          'https://neetcode.io/solutions/partition-equal-subset-sum',
       },
     ],
   },
-  'intervals': {
-    prerequisites: [
-
-    ],
+  intervals: {
+    prerequisites: [],
     problems: [
       {
         id: 1,
@@ -1047,12 +1112,14 @@ export const topicsContent: Topics = {
         id: 6,
         title: 'Minimum Interval to Include Each Query ',
         difficulty: 'hard',
-        problemLink: 'https://leetcode.com/problems/minimum-interval-to-include-each-query/',
-        solutionLink: 'https://neetcode.io/solutions/minimum-interval-to-include-each-query',
+        problemLink:
+          'https://leetcode.com/problems/minimum-interval-to-include-each-query/',
+        solutionLink:
+          'https://neetcode.io/solutions/minimum-interval-to-include-each-query',
       },
     ],
   },
-  'greedy': {
+  greedy: {
     prerequisites: [
       {
         id: '1',
@@ -1100,8 +1167,10 @@ export const topicsContent: Topics = {
         id: 6,
         title: 'Merge Triplets to Form Target Triplet',
         difficulty: 'medium',
-        problemLink: 'https://leetcode.com/problems/merge-triplets-to-form-target-triplet/',
-        solutionLink: 'https://neetcode.io/solutions/merge-triplets-to-form-target-triplet',
+        problemLink:
+          'https://leetcode.com/problems/merge-triplets-to-form-target-triplet/',
+        solutionLink:
+          'https://neetcode.io/solutions/merge-triplets-to-form-target-triplet',
       },
       {
         id: 7,
@@ -1154,8 +1223,10 @@ export const topicsContent: Topics = {
         id: 2,
         title: 'JMin Cost to Connect All Points',
         difficulty: 'medium',
-        problemLink: 'https://leetcode.com/problems/min-cost-to-connect-all-points/',
-        solutionLink: 'https://neetcode.io/solutions/min-cost-to-connect-all-points',
+        problemLink:
+          'https://leetcode.com/problems/min-cost-to-connect-all-points/',
+        solutionLink:
+          'https://neetcode.io/solutions/min-cost-to-connect-all-points',
       },
       {
         id: 3,
@@ -1182,8 +1253,10 @@ export const topicsContent: Topics = {
         id: 6,
         title: 'Cheapest Flights Within K Stops',
         difficulty: 'medium',
-        problemLink: 'https://leetcode.com/problems/cheapest-flights-within-k-stops/',
-        solutionLink: 'https://neetcode.io/solutions/cheapest-flights-within-k-stops',
+        problemLink:
+          'https://leetcode.com/problems/cheapest-flights-within-k-stops/',
+        solutionLink:
+          'https://neetcode.io/solutions/cheapest-flights-within-k-stops',
       },
     ],
   },
@@ -1222,15 +1295,19 @@ export const topicsContent: Topics = {
         id: 2,
         title: 'Longest Common Subsequence',
         difficulty: 'medium',
-        problemLink: 'https://leetcode.com/problems/longest-common-subsequence/',
-        solutionLink: 'https://neetcode.io/solutions/longest-common-subsequence',
+        problemLink:
+          'https://leetcode.com/problems/longest-common-subsequence/',
+        solutionLink:
+          'https://neetcode.io/solutions/longest-common-subsequence',
       },
       {
         id: 3,
         title: 'Best Time to Buy And Sell Stock With Cooldown ',
         difficulty: 'medium',
-        problemLink: 'https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/',
-        solutionLink: 'https://neetcode.io/solutions/best-time-to-buy-and-sell-stock-with-cooldown',
+        problemLink:
+          'https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/',
+        solutionLink:
+          'https://neetcode.io/solutions/best-time-to-buy-and-sell-stock-with-cooldown',
       },
       {
         id: 4,
@@ -1257,8 +1334,10 @@ export const topicsContent: Topics = {
         id: 7,
         title: 'Longest Increasing Path In a Matrix',
         difficulty: 'hard',
-        problemLink: 'https://leetcode.com/problems/longest-increasing-path-in-a-matrix/',
-        solutionLink: 'https://neetcode.io/solutions/longest-increasing-path-in-a-matrix',
+        problemLink:
+          'https://leetcode.com/problems/longest-increasing-path-in-a-matrix/',
+        solutionLink:
+          'https://neetcode.io/solutions/longest-increasing-path-in-a-matrix',
       },
       {
         id: 8,
@@ -1285,8 +1364,10 @@ export const topicsContent: Topics = {
         id: 11,
         title: 'Regular Expression Matching',
         difficulty: 'hard',
-        problemLink: 'https://leetcode.com/problems/regular-expression-matching/',
-        solutionLink: 'https://neetcode.io/solutions/regular-expression-matching',
+        problemLink:
+          'https://leetcode.com/problems/regular-expression-matching/',
+        solutionLink:
+          'https://neetcode.io/solutions/regular-expression-matching',
       },
     ],
   },
