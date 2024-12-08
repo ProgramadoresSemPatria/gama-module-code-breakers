@@ -36,13 +36,13 @@ export function Modal({
   return (
     <AnimatePresence>
       {topicContent && isOpen && (
-        <div className="fixed inset-0 z-50 flex justify-end bg-black/50 ">
+        <div className="fixed inset-0 z-50 flex justify-end bg-black/50">
           <motion.div
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ duration: 0.2, ease: 'easeOut' }}
-            className="h-full w-4/5 bg-gray-800 p-4 shadow-lg overflow-y-auto"
+            className="h-full w-4/5 overflow-y-auto bg-gray-800 p-4 shadow-lg"
           >
             <button
               className="rounded bg-red-100 px-4 py-2 text-xs font-bold text-red-600 hover:bg-red-200"

@@ -49,8 +49,8 @@ export function ProblemsTable({ problems }: ProblemsTable) {
                   problem.difficulty === 'easy'
                     ? 'text-green-500'
                     : problem.difficulty === 'medium'
-                    ? 'text-yellow-500'
-                    : 'text-red-500'
+                      ? 'text-yellow-500'
+                      : 'text-red-500'
                 }`}
               >
                 {problem.difficulty}
