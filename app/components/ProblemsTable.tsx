@@ -44,7 +44,17 @@ export function ProblemsTable({ problems }: ProblemsTable) {
                   {problem.title}
                 </Link>
               </td>
-              <td className="p-2">{problem.difficulty}</td>
+              <td
+                className={`px-2 ${
+                  problem.difficulty === 'easy'
+                    ? 'text-green-500'
+                    : problem.difficulty === 'medium'
+                      ? 'text-yellow-500'
+                      : 'text-red-500'
+                }`}
+              >
+                {problem.difficulty}
+              </td>
               <td className="p-2 pl-4 pr-4 text-right">
                 <Link
                   href={problem.solutionLink}
