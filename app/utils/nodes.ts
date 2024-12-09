@@ -3,10 +3,10 @@ import { Edge, MarkerType, Node } from '@xyflow/react';
 export const initialNodes: Node[] = [
   {
     id: '1',
+    type: 'custom',
     position: { x: 0, y: 0 },
     data: { label: 'Arrays & Hashing', slug: 'arrays-&-hashing' },
     style: {
-      backgroundColor: '#454d9e',
       color: '#fff',
       fontWeight: 'bold',
       cursor: 'pointer',
@@ -14,10 +14,10 @@ export const initialNodes: Node[] = [
   },
   {
     id: '2',
+    type: 'custom',
     position: { x: -100, y: 130 },
     data: { label: 'Two Pointers', slug: 'two-pointers' },
     style: {
-      backgroundColor: '#454d9e',
       color: '#fff',
       fontWeight: 'bold',
       cursor: 'pointer',
@@ -25,10 +25,10 @@ export const initialNodes: Node[] = [
   },
   {
     id: '3',
+    type: 'custom',
     position: { x: 100, y: 130 },
     data: { label: 'Stack', slug: 'stack' },
     style: {
-      backgroundColor: '#454d9e',
       color: '#fff',
       fontWeight: 'bold',
       cursor: 'pointer',
@@ -36,10 +36,10 @@ export const initialNodes: Node[] = [
   },
   {
     id: '4',
+    type: 'custom',
     position: { x: -200, y: 230 },
     data: { label: 'Binary Search', slug: 'binary-search' },
     style: {
-      backgroundColor: '#454d9e',
       color: '#fff',
       fontWeight: 'bold',
       cursor: 'pointer',
@@ -47,10 +47,10 @@ export const initialNodes: Node[] = [
   },
   {
     id: '5',
+    type: 'custom',
     position: { x: 0, y: 230 },
     data: { label: 'Sliding Window', slug: 'sliding-window' },
     style: {
-      backgroundColor: '#454d9e',
       color: '#fff',
       fontWeight: 'bold',
       cursor: 'pointer',
@@ -58,10 +58,10 @@ export const initialNodes: Node[] = [
   },
   {
     id: '6',
+    type: 'custom',
     position: { x: 200, y: 230 },
     data: { label: 'Linked List', slug: 'linked-list' },
     style: {
-      backgroundColor: '#454d9e',
       color: '#fff',
       fontWeight: 'bold',
       cursor: 'pointer',
@@ -69,10 +69,10 @@ export const initialNodes: Node[] = [
   },
   {
     id: '7',
+    type: 'custom',
     position: { x: -100, y: 330 },
     data: { label: 'Trees', slug: 'trees' },
     style: {
-      backgroundColor: '#454d9e',
       color: '#fff',
       fontWeight: 'bold',
       cursor: 'pointer',
@@ -80,10 +80,10 @@ export const initialNodes: Node[] = [
   },
   {
     id: '8',
+    type: 'custom',
     position: { x: -350, y: 430 },
     data: { label: 'Tries', slug: 'tries' },
     style: {
-      backgroundColor: '#454d9e',
       color: '#fff',
       fontWeight: 'bold',
       cursor: 'pointer',
@@ -91,10 +91,10 @@ export const initialNodes: Node[] = [
   },
   {
     id: '9',
+    type: 'custom',
     position: { x: 300, y: 430 },
     data: { label: 'Backtracking', slug: 'backtracking' },
     style: {
-      backgroundColor: '#454d9e',
       color: '#fff',
       fontWeight: 'bold',
       cursor: 'pointer',
@@ -102,10 +102,10 @@ export const initialNodes: Node[] = [
   },
   {
     id: '10',
+    type: 'custom',
     position: { x: -200, y: 530 },
     data: { label: 'Heap/ Priority Queue', slug: 'heap-priority-queue' },
     style: {
-      backgroundColor: '#454d9e',
       color: '#fff',
       fontWeight: 'bold',
       cursor: 'pointer',
@@ -113,10 +113,10 @@ export const initialNodes: Node[] = [
   },
   {
     id: '11',
+    type: 'custom',
     position: { x: 200, y: 530 },
     data: { label: 'Graphs', slug: 'graphs' },
     style: {
-      backgroundColor: '#454d9e',
       color: '#fff',
       fontWeight: 'bold',
       cursor: 'pointer',
@@ -124,10 +124,10 @@ export const initialNodes: Node[] = [
   },
   {
     id: '12',
+    type: 'custom',
     position: { x: 500, y: 530 },
     data: { label: '1-D DP', slug: '1-d-dp' },
     style: {
-      backgroundColor: '#454d9e',
       color: '#fff',
       fontWeight: 'bold',
       cursor: 'pointer',
@@ -135,10 +135,10 @@ export const initialNodes: Node[] = [
   },
   {
     id: '13',
+    type: 'custom',
     position: { x: -330, y: 630 },
     data: { label: 'Intervals', slug: 'intervals' },
     style: {
-      backgroundColor: '#454d9e',
       color: '#fff',
       fontWeight: 'bold',
       cursor: 'pointer',
@@ -146,10 +146,10 @@ export const initialNodes: Node[] = [
   },
   {
     id: '14',
+    type: 'custom',
     position: { x: -130, y: 630 },
     data: { label: 'Greedy', slug: 'greedy' },
     style: {
-      backgroundColor: '#454d9e',
       color: '#fff',
       fontWeight: 'bold',
       cursor: 'pointer',
@@ -157,10 +157,10 @@ export const initialNodes: Node[] = [
   },
   {
     id: '15',
+    type: 'custom',
     position: { x: 70, y: 630 },
     data: { label: 'Advanced Graphs', slug: 'advanced-graphs' },
     style: {
-      backgroundColor: '#454d9e',
       color: '#fff',
       fontWeight: 'bold',
       cursor: 'pointer',
@@ -168,10 +168,10 @@ export const initialNodes: Node[] = [
   },
   {
     id: '16',
+    type: 'custom',
     position: { x: 380, y: 630 },
     data: { label: '2-D DP', slug: '2d-dp' },
     style: {
-      backgroundColor: '#454d9e',
       color: '#fff',
       fontWeight: 'bold',
       cursor: 'pointer',
@@ -179,10 +179,10 @@ export const initialNodes: Node[] = [
   },
   {
     id: '17',
+    type: 'custom',
     position: { x: 560, y: 630 },
     data: { label: 'Bit Manipulation', slug: 'bit-manipulation' },
     style: {
-      backgroundColor: '#454d9e',
       color: '#fff',
       fontWeight: 'bold',
       cursor: 'pointer',
@@ -190,10 +190,10 @@ export const initialNodes: Node[] = [
   },
   {
     id: '18',
+    type: 'custom',
     position: { x: 330, y: 730 },
     data: { label: 'Math & Geometry', slug: 'math-&-geometry' },
     style: {
-      backgroundColor: '#454d9e',
       color: '#fff',
       fontWeight: 'bold',
       cursor: 'pointer',

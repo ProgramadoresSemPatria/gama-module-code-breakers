@@ -15,12 +15,9 @@ export function ProgressBar({
     <div
       className={`justify-centerpx-4 flex flex-col items-center ${className} w-64`}
     >
-      <p className="text-sm font-bold">
-        ({progress} / {total})
-      </p>
-      <div className="mt-2 h-4 w-full rounded-full bg-white">
+      <div className="h-2 w-full rounded-full bg-white">
         <div
-          className="h-4 rounded-full bg-blue-500"
+          className="h-2 rounded-full bg-blue-500"
           style={{ width: `${percentage}%` }}
         ></div>
       </div>

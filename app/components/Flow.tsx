@@ -3,6 +3,7 @@
 import {
   Controls,
   Node,
+  NodeTypes,
   ReactFlow,
   ReactFlowProvider,
   useNodesState,
@@ -13,12 +14,17 @@ import { CSSProperties, useState } from 'react';
 import { initialEdges, initialNodes } from '@/app/utils/nodes';
 import { TopicContent, topicsContent } from '@/app/utils/topicsContent';
 
+import CustomNode from './CustomNode';
 import { Modal } from './Modal';
 
 const styles: CSSProperties = {
   backgroundColor: '#13181c',
   width: '100%',
   height: 300,
+};
+
+const nodeTypes: NodeTypes = {
+  custom: CustomNode,
 };
 
 export function Flow() {
@@ -56,6 +62,7 @@ export function Flow() {
         <ReactFlow
           edges={initialEdges}
           nodes={nodes}
+          nodeTypes={nodeTypes}
           onNodesChange={onNodesChange}
           style={styles}
           fitView
