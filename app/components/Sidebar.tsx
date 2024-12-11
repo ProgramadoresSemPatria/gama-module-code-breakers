@@ -5,12 +5,28 @@ import { useState } from 'react';
 import { ProgressBar } from '@/app/components/ProgressBar';
 import { cn } from '@/app/utils/cn';
 
+import { useGlobalStore } from '../globalStore';
+import { topicsContent } from '../utils/topicsContent';
+
 type ActiveTabs = 'algorithms' | 'courses';
 
 export function Sidebar() {
   const [activeTab, setActiveTab] = useState<ActiveTabs>('algorithms');
-  const progress = 0;
-  const total = 150;
+  const { topicsProgress } = useGlobalStore();
+
+  const progress = Object.values(topicsProgress).reduce(
+    (acc, { problemsCompleted }) => {
+      return acc + problemsCompleted.length;
+    },
+    0,
+  );
+
+  const problemsAmount = Object.values(topicsContent).reduce(
+    (acc, { problems }) => {
+      return acc + problems.length;
+    },
+    0,
+  );
 
   return (
     <aside className="mt-1 hidden w-1/5 rounded bg-gray-800/95 py-2 text-center text-white md:block">
@@ -36,8 +52,13 @@ export function Sidebar() {
         </div>
       </div>
       {activeTab === 'algorithms' && (
-        <div className="flex items-center justify-center">
-          <ProgressBar progress={progress} total={total} className="mt-8" />
+        <div className="flex flex-col items-center justify-center gap-2">
+          <ProgressBar
+            progress={progress}
+            total={problemsAmount}
+            className="mt-8"
+            showLabel
+          />
         </div>
       )}
     </aside>
