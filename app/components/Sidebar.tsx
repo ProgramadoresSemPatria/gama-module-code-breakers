@@ -13,7 +13,7 @@ export function Sidebar() {
   const total = 150;
 
   return (
-    <aside className="mt-1 w-1/5 rounded bg-gray-800/95 py-2 text-center text-white">
+    <aside className="mt-1 w-1/5 rounded bg-gray-800/95 hidden md:block py-2 text-center text-white">
       <h2 className="mt-2 font-bold">Select Roadmap</h2>
       <div className="mt-4 flex items-center justify-center space-x-6">
         <div
