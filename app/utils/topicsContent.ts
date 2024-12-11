@@ -1,5 +1,5 @@
 type Prerequisite = {
-  id: string;
+  id: number;
   title: string;
   description: string;
 };
@@ -23,22 +23,22 @@ export const topicsContent: Topics = {
   'arrays-&-hashing': {
     prerequisites: [
       {
-        id: '1',
+        id: 1,
         title: 'Dynamic Arrays',
         description: 'Data Structures & Algorithms for Beginners',
       },
       {
-        id: '2',
+        id: 2,
         title: 'Hash Usage',
         description: 'Data Structures & Algorithms for Beginners',
       },
       {
-        id: '3',
+        id: 3,
         title: 'Hash Implementation',
         description: 'Data Structures & Algorithms for Beginners',
       },
       {
-        id: '4',
+        id: 4,
         title: 'Prefix Sums',
         description: 'Advanced Algorithms',
       },
@@ -116,7 +116,7 @@ export const topicsContent: Topics = {
   'two-pointers': {
     prerequisites: [
       {
-        id: '1',
+        id: 1,
         title: 'Two Pointers',
         description: 'Advanced Algorithms',
       },
@@ -170,7 +170,7 @@ export const topicsContent: Topics = {
   stack: {
     prerequisites: [
       {
-        id: '1',
+        id: 1,
         title: 'Stacks',
         description: 'Data Structures & Algorithms for Beginners',
       },
@@ -234,12 +234,12 @@ export const topicsContent: Topics = {
   'binary-search': {
     prerequisites: [
       {
-        id: '1',
+        id: 1,
         title: 'Search Array',
         description: 'Data Structures & Algorithms for Beginners',
       },
       {
-        id: '2',
+        id: 2,
         title: 'Search Range',
         description: 'Data Structures & Algorithms for Beginners',
       },
@@ -307,12 +307,12 @@ export const topicsContent: Topics = {
   'sliding-window': {
     prerequisites: [
       {
-        id: '1',
+        id: 1,
         title: 'Sliding Window Fixed Size',
         description: 'Advanced Algorithms',
       },
       {
-        id: '2',
+        id: 2,
         title: 'Sliding Window Variable Size',
         description: 'Advanced Algorithms',
       },
@@ -371,17 +371,17 @@ export const topicsContent: Topics = {
   'linked-list': {
     prerequisites: [
       {
-        id: '1',
+        id: 1,
         title: 'Singly Linked Lists',
         description: 'Data Structures & Algorithms for Beginners',
       },
       {
-        id: '2',
+        id: 2,
         title: 'Doubly Linked Lists',
         description: 'Data Structures & Algorithms for Beginners',
       },
       {
-        id: '3',
+        id: 3,
         title: 'Fast and Slow Poniters',
         description: 'Advanced Algorithms',
       },
@@ -473,27 +473,27 @@ export const topicsContent: Topics = {
   trees: {
     prerequisites: [
       {
-        id: '1',
+        id: 1,
         title: 'BST Insert and Remove',
         description: 'Data Structures & Algorithms for Beginners',
       },
       {
-        id: '2',
+        id: 2,
         title: 'Depth-First Search',
         description: 'Data Structures & Algorithms for Beginners',
       },
       {
-        id: '3',
+        id: 3,
         title: 'Breadth-First Search',
         description: 'Data Structures & Algorithms for Beginners',
       },
       {
-        id: '4',
+        id: 4,
         title: 'BST Sets and Maps',
         description: 'Data Structures & Algorithms for Beginners',
       },
       {
-        id: '5',
+        id: 5,
         title: 'Iterative DFS',
         description: 'Advanced Algorithms',
       },
@@ -629,7 +629,7 @@ export const topicsContent: Topics = {
   tries: {
     prerequisites: [
       {
-        id: '1',
+        id: 1,
         title: 'Trie',
         description: 'Advanced Algorithms',
       },
@@ -665,22 +665,22 @@ export const topicsContent: Topics = {
   backtracking: {
     prerequisites: [
       {
-        id: '1',
+        id: 1,
         title: 'Tree Maze',
         description: 'Data Structures & Algorithms for Beginners',
       },
       {
-        id: '2',
+        id: 2,
         title: 'Subsets',
         description: 'Advanced Algorithms',
       },
       {
-        id: '3',
+        id: 3,
         title: 'Combinations',
         description: 'Advanced Algorithms',
       },
       {
-        id: '4',
+        id: 4,
         title: 'Permutations',
         description: 'Advanced Algorithms',
       },
@@ -756,22 +756,22 @@ export const topicsContent: Topics = {
   'heap-priority-queue': {
     prerequisites: [
       {
-        id: '1',
+        id: 1,
         title: 'Heap Properties',
         description: 'Data Structures & Algorithms for Beginners',
       },
       {
-        id: '2',
+        id: 2,
         title: 'Push and Pop',
         description: 'Data Structures & Algorithms for Beginners',
       },
       {
-        id: '3',
+        id: 3,
         title: 'Heapify',
         description: 'Data Structures & Algorithms for Beginners',
       },
       {
-        id: '4',
+        id: 4,
         title: 'Two Heaps',
         description: 'Advanced Algorithms',
       },
@@ -839,22 +839,22 @@ export const topicsContent: Topics = {
   graphs: {
     prerequisites: [
       {
-        id: '1',
+        id: 1,
         title: 'Intro to Graphs',
         description: 'Data Structures & Algorithms for Beginners',
       },
       {
-        id: '2',
+        id: 2,
         title: 'Matrix DFS',
         description: 'Data Structures & Algorithms for Beginners',
       },
       {
-        id: '3',
+        id: 3,
         title: 'Matrix BFS',
         description: 'Data Structures & Algorithms for Beginners',
       },
       {
-        id: '4',
+        id: 4,
         title: 'Adjacency List',
         description: 'Data Structures & Algorithms for Beginners',
       },
@@ -960,12 +960,12 @@ export const topicsContent: Topics = {
   '1-d-dp': {
     prerequisites: [
       {
-        id: '1',
+        id: 1,
         title: '1-Dimension DP',
         description: 'Data Structures & Algorithms for Beginners',
       },
       {
-        id: '2',
+        id: 2,
         title: 'Palindromes',
         description: 'Advanced Algorithms',
       },
@@ -1122,7 +1122,7 @@ export const topicsContent: Topics = {
   greedy: {
     prerequisites: [
       {
-        id: '1',
+        id: 1,
         title: 'Kadanes Algorithm',
         description: 'Advanced Algorithms',
       },
@@ -1191,22 +1191,22 @@ export const topicsContent: Topics = {
   'advanced-graphs': {
     prerequisites: [
       {
-        id: '1',
+        id: 1,
         title: 'Dijkstras',
         description: 'Advanced Algorithms',
       },
       {
-        id: '2',
+        id: 2,
         title: 'Prims',
         description: 'Advanced Algorithms',
       },
       {
-        id: '3',
+        id: 3,
         title: 'Kruskals',
         description: 'Advanced Algorithms',
       },
       {
-        id: '4',
+        id: 4,
         title: 'Topological Sort',
         description: 'Advanced Algorithms',
       },
@@ -1263,22 +1263,22 @@ export const topicsContent: Topics = {
   '2d-dp': {
     prerequisites: [
       {
-        id: '1',
+        id: 1,
         title: '2-Dimension DP',
         description: 'Data Structures & Algorithms for Beginners',
       },
       {
-        id: '2',
+        id: 2,
         title: '0 / 1 Knapsack',
         description: 'Advanced Algorithms',
       },
       {
-        id: '3',
+        id: 3,
         title: 'Unbounded Knapsack',
         description: 'Advanced Algorithms',
       },
       {
-        id: '4',
+        id: 4,
         title: 'LCS',
         description: 'Advanced Algorithms',
       },
@@ -1374,7 +1374,7 @@ export const topicsContent: Topics = {
   'bit-manipulation': {
     prerequisites: [
       {
-        id: '1',
+        id: 1,
         title: 'Bit Operations',
         description: 'Data Structures & Algorithms for Beginners',
       },
