@@ -1,10 +1,10 @@
 'use client';
 
 import { AnimatePresence, motion } from 'framer-motion';
-import { useState } from 'react';
 
 import { TopicContent } from '@/app/utils/topicsContent';
 
+import { useGlobalStore } from '../globalStore';
 import { PrerequisiteCard } from './PrerequisiteCard';
 import { ProblemsTable } from './ProblemsTable';
 import { ProgressBar } from './ProgressBar';
@@ -14,6 +14,7 @@ interface ModalProps {
   onClose: () => void;
   topicContent: TopicContent | null;
   nodeLabel: string | null;
+  nodeSlug: string | null;
 }
 
 export function Modal({
@@ -21,17 +22,25 @@ export function Modal({
   onClose,
   topicContent,
   nodeLabel,
+  nodeSlug,
 }: ModalProps) {
-  const [progress, _setProgress] = useState(0);
-  const [checkedItems, setCheckedItems] = useState<string[]>([]);
+  const { getTopicProgress, setPrerequisiteCompleted, removePrerequisiteId } =
+    useGlobalStore();
 
-  const handleCheckChange = (topicId: string) => {
-    setCheckedItems((prev) =>
-      prev.includes(topicId)
-        ? prev.filter((id) => id !== topicId)
-        : [...prev, topicId],
-    );
-  };
+  const { prerequisitesCompleted, problemsCompleted } = getTopicProgress(
+    nodeSlug ?? '',
+  );
+
+  function handleTogglePrerequisiteCheck(prerequisiteId: number) {
+    if (!nodeSlug) return;
+
+    if (prerequisitesCompleted.includes(prerequisiteId)) {
+      removePrerequisiteId(nodeSlug, prerequisiteId);
+      return;
+    }
+
+    setPrerequisiteCompleted(nodeSlug, prerequisiteId);
+  }
 
   return (
     <AnimatePresence>
@@ -54,7 +63,7 @@ export function Modal({
             <div className="flex flex-col items-center text-white">
               <h2 className="text-xl font-bold">{nodeLabel}</h2>
               <ProgressBar
-                progress={progress}
+                progress={problemsCompleted.length}
                 total={topicContent.problems.length}
                 className="mt-2"
               />
@@ -70,14 +79,19 @@ export function Modal({
                   key={prerequisite.id}
                   title={prerequisite.title}
                   description={prerequisite.description}
-                  checked={checkedItems.includes(prerequisite.id)}
-                  onCheckChange={() => handleCheckChange(prerequisite.id)}
+                  checked={prerequisitesCompleted.includes(prerequisite.id)}
+                  onCheckChange={() =>
+                    handleTogglePrerequisiteCheck(prerequisite.id)
+                  }
                 />
               ))}
             </div>
 
             <div className="mt-8 overflow-x-auto">
-              <ProblemsTable problems={topicContent.problems} />
+              <ProblemsTable
+                problems={topicContent.problems}
+                topicSlug={nodeSlug ?? ''}
+              />
             </div>
           </motion.div>
         </div>

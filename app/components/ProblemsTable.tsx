@@ -1,13 +1,31 @@
+'use client';
+
 import { Star, Video } from 'lucide-react';
 import Link from 'next/link';
 
+import { useGlobalStore } from '../globalStore';
 import { Problem } from '../utils/topicsContent';
 
 type ProblemsTable = {
+  topicSlug: string;
   problems: Problem[];
 };
 
-export function ProblemsTable({ problems }: ProblemsTable) {
+export function ProblemsTable({ problems, topicSlug }: ProblemsTable) {
+  const { setProblemCompleted, getTopicProgress, removeProblemId } =
+    useGlobalStore();
+
+  const { problemsCompleted } = getTopicProgress(topicSlug);
+
+  function handleToggleCheck(topicSlug: string, problemId: number) {
+    if (problemsCompleted.includes(problemId)) {
+      removeProblemId(topicSlug, problemId);
+      return;
+    }
+
+    setProblemCompleted(topicSlug, problemId);
+  }
+
   return (
     <div className="mt-8 overflow-x-auto text-white">
       <table className="w-full text-left">
@@ -26,14 +44,38 @@ export function ProblemsTable({ problems }: ProblemsTable) {
               key={problem.id}
               className="border-t-2 border-gray-700 hover:bg-gray-800"
             >
-              <td className="p-2 pl-4 pr-4 text-center">
+              <td className="flex justify-center p-2 pl-4 pr-4 text-center">
                 <input
+                  checked={problemsCompleted.includes(problem.id)}
+                  onChange={() => handleToggleCheck(topicSlug, problem.id)}
                   type="checkbox"
-                  className='className="absolute hover:border-[#1d9772 right-4 top-4 h-4 w-4 appearance-none rounded border-2 border-gray-600 bg-gray-800 checked:border-[#1d9772] checked:bg-[#1d9772]'
+                  className="right-4 top-4 grid h-4 w-4 cursor-pointer appearance-none place-content-center rounded border-2 border-gray-600 bg-gray-800 checked:border-[#1d9772] checked:bg-[#1d9772] checked:after:content-['✓'] hover:border-[#1d9772] focus:ring-1"
                 />
               </td>
               <td className="p-2">
-                <Star color="gold" />
+                <style
+                  dangerouslySetInnerHTML={{
+                    __html: `
+                      &:has(input[id='problem-${problem.id}']:checked)
+                        #star-problem-${problem.id} {
+                          fill: #ffd700
+                        }
+                    `,
+                  }}
+                />
+
+                <label htmlFor={`problem-${problem.id}`}>
+                  <Star
+                    id={`star-problem-${problem.id}`}
+                    color="gold"
+                    className="cursor-pointer"
+                  />
+                </label>
+                <input
+                  id={`problem-${problem.id}`}
+                  className="hidden"
+                  type="checkbox"
+                />
               </td>
               <td className="p-2">
                 <Link
