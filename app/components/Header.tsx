@@ -12,11 +12,13 @@ import {
 import { Route } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { ReactNode, useState } from 'react';
 
 import { cn } from '../utils/cn';
 
 export function Header() {
+  const pathName = usePathname();
   const [isDarkMode, setIsDarkMode] = useState(true);
 
   const toggleTheme = () => {
@@ -26,22 +28,36 @@ export function Header() {
   return (
     <header className="flex h-14 items-center justify-between bg-gray-800 p-4 text-white">
       <div className="ml-2 flex items-center space-x-2 font-semibold">
-        <div className="mr-2">
+        <Link
+          className="mr-2"
+          href="https://www.borderlesscoding.com/"
+          target="_blank"
+        >
           <Image
             src="/images/logo-borderless.webp"
             alt="logo"
             width={24}
             height={40}
+            className="transition-transform hover:scale-110"
           />
-        </div>
+        </Link>
 
         <nav className="hidden space-x-4 md:flex">
-          <TextLink href="#">Courses</TextLink>
-          <TextLink href="#">Practices</TextLink>
-          <TextLink href="#" selected>
+          <TextLink href="https://neetcode.io/courses" target="_blank">
+            Courses
+          </TextLink>
+
+          <TextLink href="https://neetcode.io/practice" target="_blank">
+            Practice
+          </TextLink>
+
+          <TextLink href="/" selected={pathName === '/'}>
             Roadmap
           </TextLink>
-          <TextLink href="#">Newsletter</TextLink>
+
+          <TextLink href="https://neetcode.io/newsletter" target="_blank">
+            Newsletter
+          </TextLink>
         </nav>
       </div>
 
@@ -79,12 +95,14 @@ type TextLinkProps = {
   children: ReactNode;
   href: Route;
   selected?: boolean;
+  target?: JSX.IntrinsicElements['a']['target'];
 };
 
-function TextLink({ children, href, selected = false }: TextLinkProps) {
+function TextLink({ children, href, selected = false, target }: TextLinkProps) {
   return (
     <Link
       href={href}
+      target={target}
       className={cn(
         'relative inline-block rounded-full px-4 py-1 text-sm font-semibold transition-all hover:bg-[#4814b0]',
         selected && 'bg-[#4814b0]',

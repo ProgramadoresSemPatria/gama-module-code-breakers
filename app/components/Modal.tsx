@@ -70,7 +70,7 @@ export function Modal({
             </div>
 
             <h3 className="mt-8 text-center font-semibold text-white">
-              Topics
+              Prerequisites
             </h3>
 
             <div className="flex flex-wrap items-center justify-center gap-4 p-4">

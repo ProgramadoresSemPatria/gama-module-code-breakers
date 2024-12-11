@@ -14,7 +14,7 @@ import { CSSProperties, useEffect, useState } from 'react';
 import { initialEdges, initialNodes } from '@/app/utils/nodes';
 import { TopicContent, topicsContent } from '@/app/utils/topicsContent';
 
-import CustomNode from './CustomNode';
+import { CustomNode } from './CustomNode';
 import { Modal } from './Modal';
 
 const styles: CSSProperties = {
