@@ -33,6 +33,7 @@ export function Flow() {
   const [selectedNodeLabel, setSelectedNodeLabel] = useState<string | null>(
     null,
   );
+  const [selectedNodeSlug, setSelectedNodeSlug] = useState<string | null>(null);
   const [isModalOpen, setModalOpen] = useState<boolean>(false);
 
   function handleNodeClick(_event: React.MouseEvent, node: Node) {
@@ -40,6 +41,7 @@ export function Flow() {
 
     setSelectedTopic(topicContent);
     setSelectedNodeLabel(node.data.label as string);
+    setSelectedNodeSlug(node.data.slug as string);
 
     setModalOpen(true);
   }
@@ -82,6 +84,7 @@ export function Flow() {
         onClose={closeModal}
         topicContent={selectedTopic}
         nodeLabel={selectedNodeLabel}
+        nodeSlug={selectedNodeSlug}
       />
     </div>
   );

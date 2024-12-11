@@ -17,7 +17,7 @@ export function PrerequisiteCard({
         type="checkbox"
         checked={checked}
         onChange={onCheckChange}
-        className="absolute right-4 top-4 h-4 w-4 appearance-none rounded border-2 border-gray-600 bg-gray-950 checked:border-[#1d9772] checked:bg-[#1d9772] hover:border-[#1d9772]"
+        className="absolute right-4 top-4 grid h-4 w-4 cursor-pointer appearance-none place-content-center rounded border-2 border-gray-600 bg-gray-950 text-white checked:border-[#1d9772] checked:bg-[#1d9772] checked:after:content-['✓'] hover:border-[#1d9772]"
       />
 
       <div>
