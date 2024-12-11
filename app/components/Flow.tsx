@@ -9,7 +9,7 @@ import {
   useNodesState,
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
-import { CSSProperties, useState } from 'react';
+import { CSSProperties, useEffect, useState } from 'react';
 
 import { initialEdges, initialNodes } from '@/app/utils/nodes';
 import { TopicContent, topicsContent } from '@/app/utils/topicsContent';
@@ -52,11 +52,23 @@ export function Flow() {
     setSelectedNodeLabel(null);
   }
 
-  window.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
-      closeModal();
+  useEffect(() => {
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === 'Escape') {
+        closeModal();
+      }
     }
-  });
+
+    if (typeof window !== 'undefined') {
+      window.addEventListener('keydown', handleKeyDown);
+    }
+
+    return () => {
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('keydown', handleKeyDown);
+      }
+    };
+  }, []);
 
   return (
     <div className="relative h-full w-full p-4">
