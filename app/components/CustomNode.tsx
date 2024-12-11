@@ -17,7 +17,7 @@ interface CustomNodeData {
   };
 }
 
-const CustomNode = ({ data }: { data: CustomNodeData }) => {
+export function CustomNode({ data }: { data: CustomNodeData }) {
   const { getTopicProgress } = useGlobalStore();
   const { problemsCompleted } = getTopicProgress(data.slug);
 
@@ -50,6 +50,4 @@ const CustomNode = ({ data }: { data: CustomNodeData }) => {
       </div>
     </div>
   );
-};
-
-export default CustomNode;
+}
