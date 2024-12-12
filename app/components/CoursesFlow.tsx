@@ -9,18 +9,15 @@ import {
   useNodesState,
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
-
 import Link from 'next/link';
-import { CSSProperties, useEffect, useState } from 'react';
+import { CSSProperties, useState } from 'react';
 
-import { TopicContent, topicsContent } from '@/app/utils/topicsContent';
-
-import { CustomNodeCourse } from './CustomNodeCourse';
-import { Modal } from './Modal';
 import {
   initialEdgesCourses,
   initialNodesCourses,
-} from '../utils/CoursesNodes';
+} from '@/app/utils/CoursesNodes';
+
+import { CustomNodeCourse } from './CustomNodeCourse';
 
 const styles: CSSProperties = {
   backgroundColor: '#13181c',
@@ -49,54 +46,18 @@ const nodeTypes: NodeTypes = {
 
 export function CoursesFlow() {
   const [nodes, _setNodes, onNodesChange] = useNodesState(initialNodesCourses);
-  const [selectedTopic, setSelectedTopic] = useState<TopicContent | null>(null);
-  const [selectedNodeLink, setSelectedNodeLink] = useState<string | null>(null);
 
-  const [selectedNodeLabel, setSelectedNodeLabel] = useState<string | null>(
-    null,
-  );
   const [selectedNodeSlug, setSelectedNodeSlug] = useState<string>('');
-  const [isModalOpen, setModalOpen] = useState<boolean>(false);
   const nodeLink = NODE_LINKS[selectedNodeSlug] || NODE_LINKS['default'];
 
   function handleNodeClick(_event: React.MouseEvent, node: Node) {
-    const topicContent = topicsContent[node.data.slug as string];
-
-    setSelectedTopic(topicContent);
-    setSelectedNodeLabel(node.data.label as string);
     setSelectedNodeSlug(node.data.slug as string);
-
-    setModalOpen(true);
   }
-
-  function closeModal() {
-    setModalOpen(false);
-    setSelectedTopic(null);
-    setSelectedNodeLabel(null);
-  }
-
-  useEffect(() => {
-    function handleKeyDown(event: KeyboardEvent) {
-      if (event.key === 'Escape') {
-        closeModal();
-      }
-    }
-
-    if (typeof window !== 'undefined') {
-      window.addEventListener('keydown', handleKeyDown);
-    }
-
-    return () => {
-      if (typeof window !== 'undefined') {
-        window.removeEventListener('keydown', handleKeyDown);
-      }
-    };
-  }, []);
 
   return (
     <div className="relative h-full w-full p-4">
       <ReactFlowProvider>
-        <Link href={nodeLink}>
+        <Link href={nodeLink} target="_blank">
           <ReactFlow
             edges={initialEdgesCourses}
             nodes={nodes}
@@ -115,14 +76,6 @@ export function CoursesFlow() {
           className="rounded bg-slate-300 transition-all hover:bg-slate-400"
         />
       </ReactFlowProvider>
-
-      <Modal
-        isOpen={isModalOpen}
-        onClose={closeModal}
-        topicContent={selectedTopic}
-        nodeLabel={selectedNodeLabel}
-        nodeSlug={selectedNodeSlug}
-      />
     </div>
   );
 }
