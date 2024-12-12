@@ -1,7 +1,5 @@
 'use client';
 
-import { useState } from 'react';
-
 import { ProgressBar } from '@/app/components/ProgressBar';
 import { cn } from '@/app/utils/cn';
 
@@ -10,8 +8,12 @@ import { topicsContent } from '../utils/topicsContent';
 
 type ActiveTabs = 'algorithms' | 'courses';
 
-export function Sidebar() {
-  const [activeTab, setActiveTab] = useState<ActiveTabs>('algorithms');
+interface SidebarProps {
+  activeTab: ActiveTabs;
+  setActiveTab: (tab: ActiveTabs) => void;
+}
+
+export function Sidebar({ activeTab, setActiveTab }: SidebarProps) {
   const { topicsProgress } = useGlobalStore();
 
   const progress = Object.values(topicsProgress).reduce(
